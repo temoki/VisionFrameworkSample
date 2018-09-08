@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Qkl-pl-3h6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rectangle-->
+        <scene sceneID="tTX-aw-zrk">
+            <objects>
+                <viewController id="Qkl-pl-3h6" customClass="RectDetectionViewController" customModule="VisionAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gLW-iZ-vgT"/>
+                        <viewControllerLayoutGuide type="bottom" id="9yR-0z-BTq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a1r-QZ-Cch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWb-I4-N99">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eWb-I4-N99" secondAttribute="height" multiplier="9:16" id="3sB-gg-9K8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-em-VZQ" customClass="RectDetectionResultView" customModule="VisionAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eWb-I4-N99" firstAttribute="leading" secondItem="a1r-QZ-Cch" secondAttribute="leading" id="Ffo-jm-era"/>
+                            <constraint firstAttribute="trailing" secondItem="eWb-I4-N99" secondAttribute="trailing" id="JKh-Of-gzv"/>
+                            <constraint firstItem="1Ig-em-VZQ" firstAttribute="bottom" secondItem="eWb-I4-N99" secondAttribute="bottom" id="TFg-gV-V0H"/>
+                            <constraint firstItem="1Ig-em-VZQ" firstAttribute="top" secondItem="eWb-I4-N99" secondAttribute="top" id="aRa-4e-aWf"/>
+                            <constraint firstItem="1Ig-em-VZQ" firstAttribute="trailing" secondItem="eWb-I4-N99" secondAttribute="trailing" id="bMf-br-y5M"/>
+                            <constraint firstItem="1Ig-em-VZQ" firstAttribute="leading" secondItem="eWb-I4-N99" secondAttribute="leading" id="qBo-Sl-P9n"/>
+                            <constraint firstItem="eWb-I4-N99" firstAttribute="centerY" secondItem="a1r-QZ-Cch" secondAttribute="centerY" id="whf-ah-SQ3"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Rectangle" image="ic_crop_5_4" id="N8O-eP-r0S"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="resultView" destination="1Ig-em-VZQ" id="d4V-sf-fbx"/>
+                        <outlet property="videoView" destination="eWb-I4-N99" id="HQO-9o-2al"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nog-U3-0kg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="120"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_crop_5_4" width="24" height="24"/>
+    </resources>
+</document>

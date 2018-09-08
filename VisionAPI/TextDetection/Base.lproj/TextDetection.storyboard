@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ojl-YZ-Xgr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text-->
+        <scene sceneID="nyh-Ko-lzi">
+            <objects>
+                <viewController id="Ojl-YZ-Xgr" customClass="TextDetectionViewController" customModule="VisionAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K8i-ea-oqg"/>
+                        <viewControllerLayoutGuide type="bottom" id="K9P-5R-B7q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hWu-dk-XF8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnP-vf-2md">
+                                <rect key="frame" x="0.0" y="0.5" width="375" height="666"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vnP-vf-2md" secondAttribute="height" multiplier="9:16" id="KiZ-Gu-DIG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qg6-ge-rD9" customClass="TextDetectionResultView" customModule="VisionAPI" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.5" width="375" height="666"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vnP-vf-2md" secondAttribute="trailing" id="4m1-oP-Thp"/>
+                            <constraint firstItem="Qg6-ge-rD9" firstAttribute="trailing" secondItem="vnP-vf-2md" secondAttribute="trailing" id="PJW-ah-aoo"/>
+                            <constraint firstItem="Qg6-ge-rD9" firstAttribute="leading" secondItem="vnP-vf-2md" secondAttribute="leading" id="Zou-dE-z9v"/>
+                            <constraint firstItem="vnP-vf-2md" firstAttribute="centerY" secondItem="hWu-dk-XF8" secondAttribute="centerY" id="aXo-hL-zh0"/>
+                            <constraint firstItem="Qg6-ge-rD9" firstAttribute="bottom" secondItem="vnP-vf-2md" secondAttribute="bottom" id="cne-GK-LTG"/>
+                            <constraint firstItem="Qg6-ge-rD9" firstAttribute="top" secondItem="vnP-vf-2md" secondAttribute="top" id="vYI-kb-Oel"/>
+                            <constraint firstItem="vnP-vf-2md" firstAttribute="leading" secondItem="hWu-dk-XF8" secondAttribute="leading" id="xLS-iN-Dzf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Text" image="ic_text_fields" id="qGW-Sr-EFp"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="resultView" destination="Qg6-ge-rD9" id="r7A-Wi-l3a"/>
+                        <outlet property="videoView" destination="vnP-vf-2md" id="soP-UE-rLI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFQ-yY-x1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="-29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_text_fields" width="24" height="24"/>
+    </resources>
+</document>
